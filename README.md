@@ -281,5 +281,4 @@ src/
 ## 👥 Autoría y Versión
 
 **Autor**: Toni Tormo  
-**Proyecto**: TFG-Shakers  
-**Versión**: 27/06/2025 - v2.0
+**Versión**: 01/07/2025 - v2.0
