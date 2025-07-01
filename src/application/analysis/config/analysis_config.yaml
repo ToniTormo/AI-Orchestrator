@@ -1,0 +1,206 @@
+tech_detection:
+  extensions:
+    frontend:
+      - .ts
+      - .tsx
+      - .js
+      - .jsx
+      - .vue
+      - .svelte
+      - .elm
+      - .html
+      - .htm
+      - .css
+      - .scss
+      - .sass
+      - .less
+      - .styl
+      - .pug
+      - .hbs
+      - .ejs
+    backend:
+      - .js
+      - .jsx
+      - .ts
+      - .py
+      - .pyw
+      - .java
+      - .kts
+      - .kt
+      - .c
+      - .h
+      - .cpp
+      - .cc
+      - .cxx
+      - .c++
+      - .hpp
+      - .cs
+      - .go
+      - .rb
+      - .rs
+      - .swift
+      - .php
+      - .pl
+      - .pm
+      - .lua
+      - .scala
+      - .clj
+      - .cljs
+      - .r
+      - .hs
+      - .fsi
+      - .fs
+      - .fsx
+      - .ml
+      - .mli
+      - .dart
+      - .groovy
+    config:
+      - .json
+      - .json5
+      - .yaml
+      - .yml
+      - .toml
+      - .ini
+      - .conf
+      - .cfg
+      - .env
+      - .properties
+      - .xml
+      - .plist
+      - .dockerfile
+      - Dockerfile
+      - .tf
+      - .yarnrc
+      - .editorconfig
+    data:
+      - .sql
+      - .psql
+      - .csv
+      - .tsv
+      - .json
+      - .xml
+      - .yaml
+      - .yml
+      - .parquet
+      - .avro
+      - .orc
+      - .hdf5
+      - .feather
+      - .bio (Biological formats)
+    documentation:
+      - .md
+      - .markdown
+      - .txt
+      - .rst
+      - .adoc
+      - .tex
+      - .man
+      - .doc
+      - .docx
+      - .pdf
+
+  technology_mappings:
+    frontend:
+      .ts: "TypeScript"
+      .tsx: "TypeScript (React)"
+      .js: "JavaScript"
+      .jsx: "JavaScript (React)"
+      .vue: "Vue.js"
+      .svelte: "Svelte"
+      .elm: "Elm"
+      .html: "HTML"
+      .htm: "HTML"
+      .css: "CSS"
+      .scss: "SASS/SCSS"
+      .sass: "SASS/SCSS"
+      .less: "Less"
+      .styl: "Stylus"
+      .pug: "Pug"
+      .hbs: "Handlebars"
+      .ejs: "EJS"
+
+    backend:
+      .js: "Node.js / JavaScript"
+      .jsx: "Node.js / React JSX"
+      .ts: "Node.js / TypeScript"
+      .py: "Python"
+      .pyw: "Python (Windows GUI)"
+      .java: "Java"
+      .kts: "Kotlin Script"
+      .kt: "Kotlin"
+      .c: "C"
+      .h: "C/C++ Header"
+      .cpp: "C++"
+      .cc: "C++"
+      .cxx: "C++"
+      .c++: "C++"
+      .hpp: "C++ Header"
+      .cs: "C#"
+      .go: "Go"
+      .rb: "Ruby"
+      .rs: "Rust"
+      .swift: "Swift"
+      .php: "PHP"
+      .pl: "Perl"
+      .pm: "Perl Module"
+      .lua: "Lua"
+      .scala: "Scala"
+      .clj: "Clojure"
+      .cljs: "ClojureScript"
+      .r: "R"
+      .hs: "Haskell"
+      .fsi: "F# Interface"
+      .fs: "F#"
+      .fsx: "F# Script"
+      .ml: "OCaml"
+      .mli: "OCaml Interface"
+      .dart: "Dart"
+      .groovy: "Groovy"
+
+    config:
+      .json: "JSON"
+      .json5: "JSON5"
+      .yaml: "YAML"
+      .yml: "YAML"
+      .toml: "TOML"
+      .ini: "INI"
+      .conf: "Config"
+      .cfg: "Config"
+      .env: "Environment"
+      .properties: "Java Properties"
+      .xml: "XML"
+      .plist: "XML Plist"
+      .dockerfile: "Dockerfile"
+      Dockerfile: "Dockerfile"
+      .tf: "Terraform"
+      .yarnrc: "Yarn Config"
+      .editorconfig: "EditorConfig"
+
+    data:
+      .sql: "SQL"
+      .psql: "PostgreSQL SQL"
+      .csv: "CSV"
+      .tsv: "TSV"
+      .json: "JSON data"
+      .xml: "XML data"
+      .yaml: "YAML data"
+      .yml: "YAML data"
+      .parquet: "Parquet"
+      .avro: "Avro"
+      .orc: "ORC"
+      .hdf5: "HDF5"
+      .feather: "Feather"
+      .bio: "Biological data format"
+
+    documentation:
+      .md: "Markdown"
+      .markdown: "Markdown"
+      .txt: "Text"
+      .rst: "reStructuredText"
+      .adoc: "AsciiDoc"
+      .tex: "LaTeX"
+      .man: "Man Page"
+      .doc: "Word Document"
+      .docx: "Word Document"
+      .pdf: "PDF"

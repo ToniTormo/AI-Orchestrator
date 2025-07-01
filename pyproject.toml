@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "ai-orchestration-system"
+version = "0.1.0"
+description = "Sistema para automatizar el análisis, modificación y orquestación de proyectos con agentes de IA"
+authors = ["Toni Tormo"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<3.11"
+python-dotenv = "^1.0.0"
+gitpython = "^3.1.35"
+openai = "^1.0.0"
+pytest = "^7.3.1"
+pytest-asyncio = "^0.21.0"
+pydantic = {extras = ["email"], version = "^2.11.5"}
+typer = {extras = ["all"], version = "^0.9.0"}
+rich = "^13.7.0"
+requests = "^2.31.0"
+pydantic-settings = "^2.9.1"
+tiktoken = "^0.5.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+project = "src.main:app"
+
+[tool.pytest.ini_options]
+testpaths = ["src/project_tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --cov=src --cov-report=term-missing"
+asyncio_mode = "auto"

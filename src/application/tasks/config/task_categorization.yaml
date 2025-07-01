@@ -1,0 +1,465 @@
+task_categorization:
+  categories:
+    frontend:
+      frameworks:
+        weight: 4
+        terms:
+          # Established frameworks
+          - react
+          - vue
+          - angular
+          - svelte
+          - next
+          - nuxt
+          - gatsby
+          - ember
+          - solid
+          - alpine
+          - preact
+          - lit
+          - qwik
+          # Meta-frameworks y emergentes 2025
+          - sveltekit
+          - astro
+          - remix
+          - t3-stack
+          - solidstart
+          - fresh
+          - htmx
+      
+      ui_libraries:
+        weight: 3
+        terms:
+          # State management
+          - jquery
+          - bootstrap
+          - tailwind
+          - material-ui
+          - mui
+          - chakra
+          - antd
+          - fluent-ui
+          - recoil
+          - zustand
+          - mobx
+          - redux
+          - jotai
+          - valtio
+          # Styling
+          - styled-components
+          - emotion
+          - stitches
+          - vanilla-extract
+          - unocss
+          - windicss
+          - daisyui
+          - headlessui
+          - radix-ui
+          - mantine
+          - react-aria
+      
+      ui_concepts:
+        weight:
+        terms:
+          - ui
+          - ux
+          - component
+          - css
+          - html
+          - design
+          - responsive
+          - accessibility
+          - a11y
+          - animation
+          - transition
+          - svg
+          - canvas
+          - styles
+          - styling
+          - visual
+          - interface
+          - layout
+          - responsive
+          - user-experience
+          - user-interface
+          # Design systems emergentes
+          - design-system
+          - component-library
+          - atomic-design
+          - figma
+          - storybook
+          - micro-interactions
+          - dark-mode
+          - glassmorphism
+          - neumorphism
+      
+      frontend_files:
+        weight: 8  # Very high weight for obvious frontend files/terms
+        terms:
+          - ".css"
+          - ".scss"
+          - ".sass"
+          - ".less"
+          - ".stylus"
+          - ".html"
+          - ".htm"
+          - ".jsx"
+          - ".tsx"
+          - ".vue"
+          - ".svelte"
+          - "stylesheet"
+          - "style.css"
+          - "styles.css"
+          - "main.css"
+          - "app.css"
+          - "index.css"
+          - "message bubbles"
+          - "response containers"
+          - "visual elements"
+          - "dynamic response elements"
+      
+      web_technologies:
+        weight: 2
+        terms:
+          - dom
+          - virtual-dom
+          - shadow-dom
+          - webpack
+          - vite
+          - rollup
+          - babel
+          - sass
+          - less
+          - postcss
+          - aria
+          - pwa
+          # Build tools modernos
+          - turbo
+          - turborepo
+          - nx
+          - lerna
+          - rush
+          - esbuild
+          - swc
+          - parcel
+          # Web APIs modernas
+          - web-components
+          - service-worker
+          - webassembly
+          - wasm
+          - web-workers
+          - web-streams
+          - web-share
+          - web-bluetooth
+
+    backend:
+      frameworks:
+        weight: 5
+        terms:
+          # Python
+          - django
+          - flask
+          - fastapi
+          - starlette
+          - tornado
+          - pyramid
+          # JavaScript/TypeScript
+          - express
+          - nest
+          - koa
+          - hapi
+          - fastify
+          - adonis
+          - sails
+          # Java ecosystem
+          - spring
+          - spring-boot
+          - quarkus
+          - micronaut
+          - vert.x
+          - javalin
+          # Other languages
+          - rails
+          - laravel
+          - symfony
+          - asp.net
+          - phoenix
+          - gin
+          - fiber
+          - rocket
+          - axum
+          - warp
+          # Emerging frameworks 2025
+          - bun
+          - hono
+          - oak
+          - fresh
+          - trpc
+      
+      languages:
+        weight: 5
+        terms:
+          # Top tier (más demandados)
+          - python
+          - javascript
+          - typescript
+          - java
+          - go
+          - rust
+          # Enterprise & established
+          - kotlin
+          - csharp
+          - php
+          - swift
+          - ruby
+          - scala
+          - dart
+          # Functional & niche
+          - clojure
+          - elixir
+          - erlang
+          - haskell
+          - ocaml
+          - f#
+          # Systems & performance
+          - c
+          - cpp
+          - zig
+          - nim
+          - crystal
+          # Data & scientific
+          - r
+          - julia
+          - matlab
+          - perl
+          # WebAssembly targets
+          - assemblyscript
+          - grain
+      
+      ai_ml:
+        weight: 6 
+        terms:
+          # General AI/ML
+          - ai
+          - artificial-intelligence
+          - machine-learning
+          - deep-learning
+          - neural-networks
+          - nlp
+          - computer-vision
+          - reinforcement-learning
+          # Frameworks & libraries
+          - tensorflow
+          - pytorch
+          - scikit-learn
+          - keras
+          - jax
+          - flax
+          - huggingface
+          - transformers
+          - langchain
+          - llamaindex
+          - openai
+          - anthropic
+          # Data processing
+          - spark
+          - pandas
+          - numpy
+          - polars
+          - dask
+          - ray
+          # MLOps & deployment
+          - mlflow
+          - kubeflow
+          - wandb
+          - tensorboard
+          - dvc
+          - clearml
+          - neptune
+          - comet
+          # Model serving
+          - gradio
+          - streamlit
+          - bentoml
+          - torchserve
+          - triton
+          # Vector databases & embedding
+          - pinecone
+          - weaviate
+          - qdrant
+          - chroma
+          - milvus
+          - faiss
+          # Large Language Models
+          - llama
+          - gpt
+          - claude
+          - gemini
+          - mistral
+          - phi
+          - qwen
+          # AI Tools & Agents
+          - langsmith
+          - autogen
+          - crewai
+          - semantic-kernel
+      
+      api_concepts:
+        weight: 4
+        terms:
+          - api
+          - rest
+          - graphql
+          - grpc
+          - websocket
+          - microservice
+          - endpoint
+          - load-balancing
+          - rate-limiting
+          - api-gateway
+          - oauth
+          - openapi
+          - swagger
+          # Modern API trends
+          - trpc
+          - postman
+          - insomnia
+          - fastapi-docs
+          - api-first
+          - json-schema
+          - api-versioning
+          - webhooks
+          - server-sent-events
+          - sse
+      
+      database:
+        weight: 4
+        terms:
+          # Relational
+          - sql
+          - postgresql
+          - mysql
+          - mariadb
+          - sqlite
+          - cockroachdb
+          - planetscale
+          - supabase
+          - neon
+          # NoSQL
+          - nosql
+          - mongodb
+          - couchdb
+          - dynamodb
+          - firestore
+          # Key-value & cache
+          - redis
+          - memcached
+          - dragonfly
+          - keydb
+          # Search & analytics
+          - elasticsearch
+          - opensearch
+          - solr
+          - algolia
+          - meilisearch
+          - typesense
+          # Graph databases
+          - neo4j
+          - arangodb
+          - dgraph
+          - amazon-neptune
+          # Time series
+          - timeseries
+          - influxdb
+          - timescaledb
+          - questdb
+          # Modern SQL
+          - prisma
+          - drizzle
+          - kysely
+          - knex
+          - sequelize
+          - typeorm
+          - diesel
+          - sqlx
+      
+      backend_concepts:
+        weight: 4
+        terms:
+          # Security & Auth
+          - authentication
+          - authorization
+          - jwt
+          - oauth
+          - oauth2
+          - openid-connect
+          - saml
+          - ldap
+          - rbac
+          - abac
+          # Performance & Scaling
+          - caching
+          - queuing
+          - rabbitmq
+          - kafka
+          - redis-pub-sub
+          - bull
+          - sidekiq
+          - celery
+          - load-balancing
+          - clustering
+          # Background processing
+          - process
+          - cron
+          - job-queue
+          - scheduler
+          - workflow
+          - temporal
+          - conductor
+          # DevOps & Infrastructure
+          - devops
+          - ci
+          - cd
+          - docker
+          - kubernetes
+          - terraform
+          - ansible
+          - helm
+          - gitops
+          - argocd
+          - flux
+          # Cloud Native
+          - serverless
+          - lambda
+          - edge-computing
+          - cloudflare-workers
+          - vercel-functions
+          - netlify-functions
+          - deno-deploy
+          # Monitoring & Observability
+          - logging
+          - monitoring
+          - tracing
+          - prometheus
+          - grafana
+          - jaeger
+          - zipkin
+          - elastic-apm
+          - datadog
+          - newrelic
+          - sentry
+      
+      js_backend:
+        weight: 2
+        terms:
+          - node
+          - nodejs
+          - deno
+          - bun
+          # Node.js ecosystem
+          - npm
+          - yarn
+          - pnpm
+          - volta
+          - fnm
+          - nvm

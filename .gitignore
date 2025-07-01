@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*$py.class
+*.pyo
+
+# Byte-compiled / optimized / DLLs
+*.pyc
+*.pyd
+
+# Entornos virtuales
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos de configuración locales
+*.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+log/
+
+# Cache de tests / cobertura
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Compilación / distribución
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+sdist/
+develop-eggs/
+*.egg
+.installed.cfg
+
+# Configs de IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Documentación
+site/
+docs/_build/
+
+# mypy / bandit / linters
+.mypy_cache/
+.pyre/
+.pytype/
+
+# Otros
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Python
+
+# Jupyter
+.ipynb_checkpoints
+
+# Git guardado de carpetas vacías
+**/.gitkeep
+
+# Repositorios específicos de tu estructura
+src/infrastructure/repositories/*
+!src/infrastructure/repositories/.gitkeep
