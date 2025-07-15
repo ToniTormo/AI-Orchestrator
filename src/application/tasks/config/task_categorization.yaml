@@ -59,7 +59,7 @@ task_categorization:
           - react-aria
       
       ui_concepts:
-        weight:
+        weight: 3
         terms:
           - ui
           - ux

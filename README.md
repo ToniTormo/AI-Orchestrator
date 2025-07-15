@@ -78,7 +78,7 @@ El sistema combina agentes de IA especializados, análisis de código inteligent
 ```bash
 # Clonar el repositorio
 git clone [URL_DEL_REPOSITORIO]
-cd toni-tfg-orchestrator
+cd AI-Orchestrator
 
 # Instalar dependencias con Poetry
 poetry install

@@ -42,7 +42,7 @@ class TestAnalysisService:
         assert "estimated_hours" in result
         
         # Verify structure contains real project data
-        assert result["structure"]["name"] == "toni-tfg-orchestrator"
+        assert result["structure"]["name"] == "AI-Orchestrator"
         assert len(result["structure"]["files"]) > 0
         assert len(result["structure"]["directories"]) > 0
         
@@ -119,7 +119,7 @@ class TestAnalysisService:
         result = analysis_service._convert_structure_to_dict(real_project_structure)
         
         assert isinstance(result, dict)
-        assert result["name"] == "toni-tfg-orchestrator"
+        assert result["name"] == "AI-Orchestrator"
         assert result["total_files"] > 0
         assert result["total_directories"] > 0
         assert isinstance(result["files"], list)

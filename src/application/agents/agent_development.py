@@ -7,6 +7,7 @@ Generic agent for development tasks that receives analysis and uses type-specifi
 from typing import Dict, Any, List
 import json
 import os
+import re
 
 from src.config import settings
 from src.utils.exceptions_control import create_error, AgentError
@@ -223,8 +224,15 @@ class AgentDevelopment(AsyncServiceBase):
 
     def _parse_ai_response(self, content: str) -> Dict[str, Any]:
         """Parse the JSON response from the AI, with fallbacks for common errors."""
-        content = content.replace('```json', '').replace('```', '').strip()
+        # Remove markdown code fences if present
+        content = content.strip()
+        if content.startswith('```'):
+            # Remove leading and trailing ``` blocks (with optional json tag)
+            content = re.sub(r'^```(?:json)?', '', content, flags=re.IGNORECASE).strip()
+            if content.endswith('```'):
+                content = content[:-3].strip()
         
+        # Find JSON object boundaries
         json_start = content.find('{')
         json_end = content.rfind('}') + 1
         
@@ -233,15 +241,26 @@ class AgentDevelopment(AsyncServiceBase):
             
         json_content = content[json_start:json_end]
         
+        # First attempt to parse as-is
         try:
             return json.loads(json_content)
         except json.JSONDecodeError as e:
-            self.logger.warning(f"[AgentDevelopment] JSON parsing failed, attempting simple fix: {str(e)}")
+            self.logger.warning(f"[AgentDevelopment] JSON parsing failed, attempting fixes: {str(e)}")
             try:
-                fixed_content = json_content.replace('\\n', '\\\\n').replace('\\r', '\\\\r').replace('\\t', '\\\\t')
+                # Fix unescaped backslashes that are not valid JSON escapes
+                # Replace single backslash not followed by [ " / b f n r t u ] with doubled backslash
+                fixed_content = re.sub(r'\\(?!["\\/bfnrtu])', r'\\\\', json_content)
                 return json.loads(fixed_content)
-            except Exception as fix_error:
-                raise create_error(AgentError, f"Failed to parse JSON after fixing. Original: {str(e)}, Fix: {str(fix_error)}", "AgentDevelopment")
+            except json.JSONDecodeError as fix_error:
+                # Additional fixes for common JSON errors
+                try:
+                    # Remove trailing commas before closing braces/brackets
+                    fixed_content = re.sub(r',(\s*[}\]])', r'\1', json_content)
+                    # Fix unescaped quotes in strings
+                    fixed_content = re.sub(r'(?<!\\)"(?![,}\]:\s])', r'\\"', fixed_content)
+                    return json.loads(fixed_content)
+                except Exception as final_error:
+                    raise create_error(AgentError, f"Failed to parse JSON after multiple fixes. Original: {str(e)}, Fix attempts: {str(fix_error)}, Final: {str(final_error)}", "AgentDevelopment")
 
     def _apply_file_modifications(self, repo_path: str, files_to_modify: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Apply file modifications based on the repo path"""

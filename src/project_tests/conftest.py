@@ -108,7 +108,7 @@ def real_project_structure(project_root):
     directories = list(set([str(f.parent) for f in py_files if f.parent != Path('.')]))
     
     mock_structure = Mock()
-    mock_structure.name = "toni-tfg-orchestrator"
+    mock_structure.name = "AI-Orchestrator"
     mock_structure.files = [str(f) for f in py_files[:20]]  # Limit for performance
     mock_structure.directories = directories[:15]  # Limit for performance
     

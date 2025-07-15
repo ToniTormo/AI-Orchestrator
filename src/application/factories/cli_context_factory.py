@@ -166,7 +166,24 @@ class CLIContextFactory:
             Absolute path string for repositories directory
         """
         try:
-            project_root = Path(__file__).parents[3]
+            # Use the current working directory as the project root
+            current_working_dir = Path.cwd()
+            project_root = None
+            
+            # First, check if the current working directory contains pyproject.toml
+            if (current_working_dir / "pyproject.toml").exists():
+                project_root = current_working_dir
+            else:
+                # If not, search up the directory tree from current working directory
+                for parent in list(current_working_dir.parents):
+                    if (parent / "pyproject.toml").exists():
+                        project_root = parent
+                        break
+            
+            if project_root is None:
+                # Fallback: use current working directory
+                project_root = current_working_dir
+            
             repos_path = project_root / "src" / "infrastructure" / "repositories"
             
             if not repos_path.exists():
