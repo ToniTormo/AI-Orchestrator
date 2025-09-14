@@ -63,13 +63,21 @@ class OpenAIService:
             self.logger.debug(f"[OpenAI] Creating completion with model: {model}")
             
             # Use chat.completions for modern models, legacy completions for older ones
-            if model.startswith(('gpt-3.5', 'gpt-4')):
-                response = await self.client.chat.completions.create(
-                    model=model,
-                    messages=[{"role": "user", "content": prompt}],
-                    temperature=temperature,
-                    max_tokens=max_tokens
-                )
+            if model.startswith(('gpt-3.5', 'gpt-4', 'gpt-5')):
+                # GPT-5 models use max_completion_tokens and only support temperature=1 (default)
+                if model.startswith('gpt-5'):
+                    response = await self.client.chat.completions.create(
+                        model=model,
+                        messages=[{"role": "user", "content": prompt}],
+                        max_completion_tokens=max_tokens
+                    )
+                else:
+                    response = await self.client.chat.completions.create(
+                        model=model,
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=temperature,
+                        max_tokens=max_tokens
+                    )
             else:
                 response = await self.client.completions.create(
                     model=model,

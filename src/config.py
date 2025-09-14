@@ -132,7 +132,7 @@ class NotificationSettings(BaseAppSettings):
 class OpenAISettings(BaseAppSettings):
     """OpenAI settings"""
     api_key: str = ""
-    model: str = "gpt-4-turbo"
+    model: str = "gpt-5-mini"
     temperature_analysis: float = 0.2
     temperature_development: float = 0.3
 
