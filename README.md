@@ -3,7 +3,7 @@
 
 ## 📄 Descripción
 
-Este proyecto implementa un sistema avanzado de orquestación que utiliza inteligencia artificial con OpenAI GPT-4.1-mini para automatizar el análisis, modificación y gestión de proyectos de código. El sistema está diseñado para asistir a desarrolladores y equipos en la implementación de cambios y mejoras en sus repositorios, ofreciendo:
+Este proyecto, desarrollado como Trabajo de Fin de Grado para la Universitat Politècnica de València durante mis prácticas en la empresa Shakers, implementa un sistema avanzado de orquestación que utiliza inteligencia artificial con la API de OpenAI para automatizar el análisis, modificación y gestión de proyectos de código. El sistema está diseñado para asistir a desarrolladores y equipos en la implementación de cambios y mejoras en sus repositorios, ofreciendo:
 
 - 🔍 **Análisis profundo** de la estructura y calidad del código
 - 📊 **Evaluación de viabilidad** y estimación de esfuerzo inteligente
@@ -281,4 +281,4 @@ src/
 ## 👥 Autoría y Versión
 
 **Autor**: Toni Tormo  
-**Versión**: 01/07/2025 - v2.0
+**Versión**: 14/09/2025 - v2.1
